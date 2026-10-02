@@ -15,4 +15,4 @@ jobs:
         run: test -f index.html
 
       - name: Validate JS file
-        run: test -f github-actions/script.js
+        run: test -f script.js
