@@ -1,5 +1,5 @@
-name:validate-file
-on:push
+name: validate-file
+on: push
 jobs:
   validate-file:
     runs-on: ubuntu-latest
