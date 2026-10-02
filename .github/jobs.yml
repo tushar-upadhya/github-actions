@@ -1,5 +1,5 @@
 name: jobs
-on: workflow_dispatch
+on: push
 jobs:
   validate-html:
     runs-on: ubuntu-latest
