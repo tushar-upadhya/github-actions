@@ -1,7 +1,6 @@
 name: Validate File
 
-on:
-  push:
+on: workflow_dispatch
 
 jobs:
   validate-file:
