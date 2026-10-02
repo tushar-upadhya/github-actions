@@ -1,8 +1,11 @@
 name: jobs
+
 on: push
+
 jobs:
   validate-html:
     runs-on: ubuntu-latest
+
     steps:
       - name: Get repo code
         uses: actions/checkout@v4
@@ -10,9 +13,9 @@ jobs:
       - name: Validate HTML file
         run: test -f index.html
 
-
   validate-js:
     runs-on: ubuntu-latest
+
     steps:
       - name: Get repo code
         uses: actions/checkout@v4
@@ -23,9 +26,10 @@ jobs:
       - name: Validate JS code
         run: node --check script.js
 
-    validate-code:
+  validate-code:
     needs: [validate-html, validate-js]
     runs-on: ubuntu-latest
+
     steps:
       - name: Get repo code
         uses: actions/checkout@v4
@@ -35,4 +39,3 @@ jobs:
 
       - name: Validate HTML file
         run: npx htmlhint index.html
-
